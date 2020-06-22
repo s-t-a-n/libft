@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:01:07 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/06/22 15:01:09 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/06/22 18:48:15 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,9 @@ char			**ft_strsplit(char const *s, char c)
 		elem_len = ft_strclen(s, c);
 		array[array_ctr] = ft_strsub(s, 0, elem_len);
 		if (array[array_ctr] == NULL)
-			return (ft_destroy_array((void **)array, sizeof(void *), array_ctr + 1));
-		s += elem_len;
+			return (ft_destroy_array((void **)array, sizeof(void *),
+				array_ctr + 1));
+			s += elem_len;
 		s += ft_get_skip_len(s, c);
 		array_ctr++;
 	}
