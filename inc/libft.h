@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/06/19 22:05:51 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/06/22 15:00:35 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,8 @@ void				ft_putwstr_fd(wchar_t *ws, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr_base_fd(unsigned long nb, int base, int fd);
-void				*ft_arrayclear(void **ptr_array, size_t len);
+void				*ft_destroy_array(void **elements, int elem_size,
+						int elem_count);
 
 void				dynmem_destroy(t_dynmem *dym);
 t_dynmem			*dynmem_init(size_t element_cap);
