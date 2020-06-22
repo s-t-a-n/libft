@@ -6,7 +6,7 @@
 #    By: sverschu <sverschu@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/19 17:16:57 by sverschu      #+#    #+#                  #
-#    Updated: 2020/06/19 17:29:27 by sverschu      ########   odam.nl          #
+#    Updated: 2020/06/22 14:39:56 by sverschu      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strsub												\
 		$(SRC_D)/ft_tolower												\
 		$(SRC_D)/ft_toupper												\
-		$(SRC_D)/ft_arrayclear											\
+		$(SRC_D)/ft_destroy_array										\
 		$(SRC_D)/ft_strclen												\
 		$(SRC_D)/ft_isspace												\
 		$(SRC_D)/ft_issymbol											\
