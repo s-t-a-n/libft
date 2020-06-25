@@ -72,7 +72,7 @@ char			**ft_strsplit(char const *s, char c)
 		if (array[array_ctr] == NULL)
 			return (ft_destroy_array((void **)array, sizeof(void *),
 				array_ctr + 1));
-			s += elem_len;
+		s += elem_len;
 		s += ft_get_skip_len(s, c);
 		array_ctr++;
 	}
