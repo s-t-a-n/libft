@@ -6,7 +6,7 @@
 #    By: sverschu <sverschu@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/19 17:16:57 by sverschu      #+#    #+#                  #
-#    Updated: 2020/06/22 14:39:56 by sverschu      ########   odam.nl          #
+#    Updated: 2020/07/01 15:07:53 by sverschu      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ INC_D = inc
 
 # C source and header files
 SRC =	$(SRC_D)/ft_atoi												\
+		$(SRC_D)/ft_atoi_base											\
 		$(SRC_D)/ft_strtol												\
 		$(SRC_D)/ft_strtoull											\
 		$(SRC_D)/ft_bzero												\
