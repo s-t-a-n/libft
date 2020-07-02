@@ -6,7 +6,7 @@
 #    By: sverschu <sverschu@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/19 17:16:57 by sverschu      #+#    #+#                  #
-#    Updated: 2020/07/01 15:07:53 by sverschu      ########   odam.nl          #
+#    Updated: 2020/07/02 16:55:55 by sverschu      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -172,5 +172,8 @@ fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
+
+norm:
+	@norminette $(SRC) $(INC)
 
 .PHONY = all clean fclean re

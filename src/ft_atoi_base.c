@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/01 14:45:49 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/07/01 17:46:12 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/07/02 16:57:48 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,13 @@ static int	ft_atoi_handle_sign_and_overflow(unsigned long value, int sign)
 		return ((int)(value * sign));
 }
 
-int		ft_atoi_base(const char *str, unsigned int base)
+int			ft_atoi_base(const char *str, unsigned int base)
 {
-	UNTESTED
-
 	unsigned long	retval;
 	int				sign;
 
 	if (base < 2 || base > 36)
-		return 0;
+		return (0);
 	sign = 1;
 	while (ft_isspace(*str))
 		str++;
@@ -42,7 +40,7 @@ int		ft_atoi_base(const char *str, unsigned int base)
 		str++;
 	}
 	retval = 0;
-	while (ft_isalnum(*str))
+	while (ft_isalnum(*str) && (*str % 16) < base)
 	{
 		retval = retval * base + (*str % 16);
 		str++;
