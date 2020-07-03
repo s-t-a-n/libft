@@ -131,6 +131,19 @@ else
 	LD_FLAGS += $(CC_OPT_FLAGS)
 endif
 
+# os variables
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+    OS = LINUX
+    CC_FLAGS += -D LINUX -Wno-misleading-indentation
+    LD_FLAGS +=
+endif
+ifeq ($(UNAME_S),Darwin)
+    OS = OSX
+    CC_FLAGS += -D OSX
+    LD_FLAGS +=
+endif
+
 # make commands
 all: $(NAME)
 
