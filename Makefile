@@ -6,7 +6,7 @@
 #    By: sverschu <sverschu@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/19 17:16:57 by sverschu      #+#    #+#                  #
-#    Updated: 2020/07/02 17:46:31 by sverschu      ########   odam.nl          #
+#    Updated: 2020/08/07 14:59:24 by sverschu      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strtoull											\
 		$(SRC_D)/ft_bzero												\
 		$(SRC_D)/ft_calloc												\
+		$(SRC_D)/ft_realloc												\
 		$(SRC_D)/ft_isupper												\
 		$(SRC_D)/ft_islower												\
 		$(SRC_D)/ft_isalnum												\

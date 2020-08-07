@@ -6,9 +6,11 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/08/07 14:52:23 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/08/07 14:57:36 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/08/07 15:00:12 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 #include "libft.h"
 
