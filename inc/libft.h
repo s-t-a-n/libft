@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/08/07 14:59:12 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/08/07 15:08:43 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
-void				*ft_realloc(void *ptr, size_t size);
+void				*ft_realloc(void *ptr, size_t size, size_t new_size);
 
 void				ft_putchar_fd(char c, int fd);
 void				ft_putwchar_fd(wchar_t wc, int fd);

@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/08/07 14:52:23 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/08/07 15:00:12 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/08/07 15:08:05 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t size)
+void	*ft_realloc(void *ptr, size_t size, size_t new_size)
 {
 	void *nptr;
 
 	if (!ptr)
-		return (malloc(size));
-	else if (ptr && size == 0)
+		return (malloc(new_size));
+	else if (ptr && new_size == 0)
 	{
 		free(ptr);
 		return (malloc(1));
 	}
 	else
 	{
-		nptr = malloc(size);
+		nptr = malloc(new_size);
 		if (nptr)
 		{
 			ft_memcpy(nptr, ptr, size);
