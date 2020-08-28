@@ -6,7 +6,7 @@
 #    By: sverschu <sverschu@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/19 17:16:57 by sverschu      #+#    #+#                  #
-#    Updated: 2020/08/07 14:59:24 by sverschu      ########   odam.nl          #
+#    Updated: 2020/08/28 19:22:00 by sverschu      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_wclen												\
 		$(SRC_D)/ft_strmapi												\
 		$(SRC_D)/ft_strncmp												\
+		$(SRC_D)/ft_strcmp												\
 		$(SRC_D)/ft_strnstr												\
 		$(SRC_D)/ft_strrchr												\
 		$(SRC_D)/ft_strtrim												\

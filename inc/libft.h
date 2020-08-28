@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/08/07 15:08:43 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/08/28 19:23:00 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ size_t				ft_strnlen(const char *s, size_t maxlen);
 char				*ft_strrev(char *str);
 size_t				ft_strclen(const char *s, char c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strnstr(const char *haystack,
 						const char *needle, size_t len);
 char				*ft_strrchr(const char *s, int c);
