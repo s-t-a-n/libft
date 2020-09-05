@@ -6,13 +6,16 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 21:59:44 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/06/19 21:59:46 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/05 20:32:00 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
+/*
+** strdup string ignoring all occurences of char 'c'
+*/
 char			*ft_strfdup(const char *s1, char c)
 {
 	const size_t	dst_len = ft_strlen((char *)s1) + 1;
