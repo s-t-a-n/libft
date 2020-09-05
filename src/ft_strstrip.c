@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/05 20:36:21 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/05 20:36:32 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/05 21:03:45 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 /*
 ** strdup string ignoring all occurences of char 'c'
 */
-char			*ft_strstrip(const char *s1, char c)
+
+char				*ft_strstrip(const char *s1, char c)
 {
 	const size_t	dst_len = ft_strlen((char *)s1) + 1;
 	char			*dst;

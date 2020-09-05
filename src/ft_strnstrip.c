@@ -6,11 +6,9 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/05 20:34:21 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/05 21:01:21 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/05 21:04:09 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 #include <stdlib.h>
 #include "libft.h"
@@ -18,14 +16,13 @@
 /*
 ** strdup string igoring occurences of 'c' after 'n' hits
 */
+
 char			*ft_strnstrip(const char *s1, char c, unsigned int n)
 {
 	const size_t	dst_len = ft_strlen((char *)s1) + 1;
 	char			*dst;
 	size_t			ctr;
 	uint8_t			flip;
-
-	printf("len : %zu, reduced len : %lu\n", dst_len,dst_len - ft_strncount(s1, c, 1));
 
 	dst = malloc(sizeof(char) * (dst_len - ft_strncount(s1, c, 1)));
 	if (!dst)

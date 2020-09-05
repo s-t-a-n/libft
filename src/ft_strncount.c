@@ -6,12 +6,16 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/05 20:39:30 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/05 20:42:50 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/05 21:04:00 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sys/types.h>
 #include <stdint.h>
+
+/*
+** count occurenced of 'c' if they occur more than 'n' sequentially
+*/
 
 size_t		ft_strncount(const char *s1, char c, unsigned int n)
 {
