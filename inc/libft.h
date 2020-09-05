@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/08/28 19:23:00 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/05 20:45:57 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,9 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 size_t				ft_strcount(const char *s1, char c);
-char				*ft_strfdup(const char *s1, char c);
+size_t				ft_strncount(const char *s1, char c, unsigned int n);
+char				*ft_strstrip(const char *s1, char c);
+char				*ft_strnstrip(const char *s1, char c, unsigned int n);
 
 int					ft_tolower(int c);
 int					ft_toupper(int c);
@@ -121,6 +123,9 @@ void				ft_putnbr_base_fd(unsigned long nb, int base, int fd);
 void				*ft_destroy_array(void **elements, int elem_size,
 						int elem_count);
 
+/*
+** highly rudimentary vector implementation, NOT tested
+*/
 void				dynmem_destroy(t_dynmem *dym);
 t_dynmem			*dynmem_init(size_t element_cap);
 t_bool				dynmem_pushback(t_dynmem **dym, unsigned char *element);

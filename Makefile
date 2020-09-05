@@ -6,7 +6,7 @@
 #    By: sverschu <sverschu@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/19 17:16:57 by sverschu      #+#    #+#                  #
-#    Updated: 2020/08/28 19:22:00 by sverschu      ########   odam.nl          #
+#    Updated: 2020/09/05 20:42:10 by sverschu      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,8 +76,10 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_issymbol											\
 		$(SRC_D)/ft_strndup												\
 		$(SRC_D)/ft_strnlen												\
-		$(SRC_D)/ft_strfdup												\
+		$(SRC_D)/ft_strstrip											\
+		$(SRC_D)/ft_strnstrip											\
 		$(SRC_D)/ft_strcount											\
+		$(SRC_D)/ft_strncount											\
 		$(SRC_D)/ft_swap												\
 		$(SRC_D)/ft_dynmem
 SRC := $(SRC:%=%.c)

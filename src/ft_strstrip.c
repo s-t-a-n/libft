@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strfdup.c                                       :+:    :+:            */
+/*   ft_strstrip.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/06/19 21:59:44 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/05 20:32:00 by sverschu      ########   odam.nl         */
+/*   Created: 2020/09/05 20:36:21 by sverschu      #+#    #+#                 */
+/*   Updated: 2020/09/05 20:36:32 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /*
 ** strdup string ignoring all occurences of char 'c'
 */
-char			*ft_strfdup(const char *s1, char c)
+char			*ft_strstrip(const char *s1, char c)
 {
 	const size_t	dst_len = ft_strlen((char *)s1) + 1;
 	char			*dst;
