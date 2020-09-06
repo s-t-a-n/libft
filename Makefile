@@ -6,7 +6,7 @@
 #    By: sverschu <sverschu@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/19 17:16:57 by sverschu      #+#    #+#                  #
-#    Updated: 2020/09/05 20:42:10 by sverschu      ########   odam.nl          #
+#    Updated: 2020/09/06 16:58:58 by sverschu      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,6 +80,8 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strnstrip											\
 		$(SRC_D)/ft_strcount											\
 		$(SRC_D)/ft_strncount											\
+		$(SRC_D)/ft_strscan												\
+		$(SRC_D)/ft_strnscan											\
 		$(SRC_D)/ft_swap												\
 		$(SRC_D)/ft_dynmem
 SRC := $(SRC:%=%.c)

@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/05 20:45:57 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/06 16:58:33 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ size_t				ft_strcount(const char *s1, char c);
 size_t				ft_strncount(const char *s1, char c, unsigned int n);
 char				*ft_strstrip(const char *s1, char c);
 char				*ft_strnstrip(const char *s1, char c, unsigned int n);
+char				*ft_strscan(char *str);
+char				*ft_strnscan(char *str, size_t n);
 
 int					ft_tolower(int c);
 int					ft_toupper(int c);
