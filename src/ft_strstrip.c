@@ -16,6 +16,7 @@
 
 /*
 ** strdup string ignoring all occurences of char 'c'
+** theretofore ft_strfdup
 */
 
 char				*ft_strstrip(const char *s1, char c)

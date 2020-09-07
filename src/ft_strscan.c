@@ -14,11 +14,12 @@
 
 /*
 ** skip all whitespaces and return new pointer
+** ascii 8 to and including 13 ignores most printer related spaces
 */
 
 char	*ft_strscan(char *str)
 {
-	while (*str && ((*str > 9 && *str < 13) || *str == 32))
+	while (*str && ((*str >= 8 && *str <= 13) || *str == 32))
 		str++;
 	return(str);
 }

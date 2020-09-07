@@ -16,6 +16,7 @@
 
 /*
 ** strdup string igoring occurences of 'c' after 'n' hits
+** theretofore ft_strfdup
 */
 
 char			*ft_strnstrip(const char *s1, char c, unsigned int n)
