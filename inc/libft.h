@@ -59,6 +59,7 @@ void				ft_swap(char *a, char *b);
 void				ft_pswap(void **a, void **b);
 
 int					ft_atoi(const char *str);
+char				*strtok(char *str, const char *delim);
 long				ft_strtol(const char *str, char **endptr, int base);
 unsigned long long	ft_strtoull(const char *str, char **endptr, int base);
 char				*ft_itoa(int n);
