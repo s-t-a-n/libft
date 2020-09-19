@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/06 16:58:33 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/19 20:45:58 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdint.h>
 # include "ft_std.h"
 
 /*
@@ -31,16 +32,6 @@ typedef enum		e_case
 	__lowcase,
 	__upcase
 }					t_case;
-
-/*
-** 'vector'-like struct (see dynmem.c)
-*/
-typedef struct		s_dynmen
-{
-	size_t			element_cap;
-	size_t			element_count;
-	unsigned char	**mem;
-}					t_dynmem;
 
 /*
 **  libft functions
@@ -127,9 +118,37 @@ void				*ft_destroy_array(void **elements, int elem_size,
 						int elem_count);
 
 /*
-** highly rudimentary vector implementation, NOT tested
+** basic list functionality
 */
+typedef struct		s_list t_list;
+typedef struct		s_list
+{
+	void			*subject;
+	t_list			*next;
+	t_list			*prev;
+}					t_list;
+
+t_list				*lst_addback(t_list *root, void *subject);
+t_list				*lst_addfront(t_list *root, void *subject);
+t_list				*lst_peekback(t_list *root);
+t_list				*lst_peekfront(t_list *root);
+t_list				*lst_popback(t_list *root, uint8_t is_malloced);
+t_list				*lst_popfront(t_list *root, uint8_t is_malloced);
+t_list				*lst_destroy_item(t_list *root, uint8_t is_malloced);
+t_list				*lst_destroy(t_list *root, uint8_t is_malloced);
+
+/*
+** very basic vector implementation, kept in for compatibility with old projects
+*/
+typedef struct		s_dynmen
+{
+	size_t			element_cap;
+	size_t			element_count;
+	unsigned char	**mem;
+}					t_dynmem;
+
 void				dynmem_destroy(t_dynmem *dym);
 t_dynmem			*dynmem_init(size_t element_cap);
 t_bool				dynmem_pushback(t_dynmem **dym, unsigned char *element);
+
 #endif

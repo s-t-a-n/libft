@@ -6,7 +6,7 @@
 #    By: sverschu <sverschu@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/19 17:16:57 by sverschu      #+#    #+#                  #
-#    Updated: 2020/09/06 16:58:58 by sverschu      ########   odam.nl          #
+#    Updated: 2020/09/19 20:44:26 by sverschu      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,16 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strscan												\
 		$(SRC_D)/ft_strnscan											\
 		$(SRC_D)/ft_swap												\
-		$(SRC_D)/ft_dynmem
+		$(SRC_D)/ft_dynmem												\
+		$(SRC_D)/lst_addback											\
+		$(SRC_D)/lst_addfront											\
+		$(SRC_D)/lst_peekback											\
+		$(SRC_D)/lst_peekfront											\
+		$(SRC_D)/lst_popback											\
+		$(SRC_D)/lst_popfront											\
+		$(SRC_D)/lst_destroy_item										\
+		$(SRC_D)/lst_destroy											\
+
 SRC := $(SRC:%=%.c)
 
 INC =	$(INC_D)/libft.h
