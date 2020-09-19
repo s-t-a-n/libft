@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/06 16:57:32 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/06 16:58:09 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/19 20:48:05 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ char	*ft_strnscan(char *str, size_t n)
 		str++;
 		n--;
 	}
-	return(str);
+	return (str);
 }

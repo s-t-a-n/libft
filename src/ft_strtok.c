@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strtok.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: sverschu <sverschu@student.codam.n>          +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/09/19 20:48:17 by sverschu      #+#    #+#                 */
+/*   Updated: 2020/09/19 20:49:11 by sverschu      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
@@ -22,7 +34,7 @@ char	*ft_strtok(char *str, const char *delim)
 		if (delim[i] == *tail)
 		{
 			tail++;
-			return(tail);
+			return (tail);
 		}
 		tail++;
 	}
@@ -32,6 +44,6 @@ char	*ft_strtok(char *str, const char *delim)
 /*
 ** char	*ft_strtok_r(char *str, const char *delim, char **saveptr)
 ** {
-** 
+**
 ** }
 */
