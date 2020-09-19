@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/19 20:14:17 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/19 20:56:30 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/19 21:55:59 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ t_list		*lst_addback(t_list **root, void *subject)
 			new->prev = head;
 		}
 		else
+		{
+			new->prev = NULL;
 			*root = new;
+		}
 	}
 	return (new);
 }
