@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/19 20:45:58 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/19 20:56:35 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,8 +128,8 @@ typedef struct		s_list
 	t_list			*prev;
 }					t_list;
 
-t_list				*lst_addback(t_list *root, void *subject);
-t_list				*lst_addfront(t_list *root, void *subject);
+t_list				*lst_addback(t_list **root, void *subject);
+t_list				*lst_addfront(t_list **root, void *subject);
 t_list				*lst_peekback(t_list *root);
 t_list				*lst_peekfront(t_list *root);
 t_list				*lst_popback(t_list *root, uint8_t is_malloced);
