@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/19 20:56:35 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/09/19 21:21:46 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,7 @@ t_list				*lst_peekfront(t_list *root);
 t_list				*lst_popback(t_list *root, uint8_t is_malloced);
 t_list				*lst_popfront(t_list *root, uint8_t is_malloced);
 t_list				*lst_destroy_item(t_list *root, uint8_t is_malloced);
-t_list				*lst_destroy(t_list *root, uint8_t is_malloced);
+t_list				*lst_destroy(t_list **root, uint8_t is_malloced);
 
 /*
 ** very basic vector implementation, kept in for compatibility with old projects
