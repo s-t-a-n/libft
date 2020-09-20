@@ -32,7 +32,10 @@ t_list		*lst_addfront(t_list **root, void *subject)
 			new->next = head;
 		}
 		else
-			*root = NULL;
+		{
+			new->next = NULL;
+			*root = new;
+		}
 	}
 	return (new);
 }
