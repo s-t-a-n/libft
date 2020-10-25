@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/19 21:21:46 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/10/25 22:33:23 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ void				ft_swap(char *a, char *b);
 void				ft_pswap(void **a, void **b);
 
 int					ft_atoi(const char *str);
-char				*strtok(char *str, const char *delim);
+char				*ft_strtok(char *str, const char *delim);
+size_t				ft_strstring(const char *str);
 long				ft_strtol(const char *str, char **endptr, int base);
 unsigned long long	ft_strtoull(const char *str, char **endptr, int base);
 char				*ft_itoa(int n);
