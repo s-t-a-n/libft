@@ -6,7 +6,7 @@
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/09/19 20:32:08 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/09/19 21:57:48 by sverschu      ########   odam.nl         */
+/*   Updated: 2020/10/25 19:46:16 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ t_list		*lst_destroy(t_list **root, uint8_t is_malloced)
 {
 	t_list	*head;
 	t_list	*rip;
-
+	
+	if (!root || !*root)
+		return (NULL);
 	head = (*root)->prev;
 	while (head)
 	{
