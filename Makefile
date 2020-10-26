@@ -19,6 +19,8 @@ INC_D = inc
 
 # C source and header files
 SRC =	$(SRC_D)/ft_atoi												\
+		$(SRC_D)/ft_strtolower											\
+		$(SRC_D)/ft_strtoupper											\
 		$(SRC_D)/ft_strtok												\
 		$(SRC_D)/ft_strstring											\
 		$(SRC_D)/ft_strtol												\

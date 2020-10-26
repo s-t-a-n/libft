@@ -64,6 +64,8 @@ char				*ft_ldtoa(long double nb, int precision);
 char				*ft_dtoa_sc(double nb, int precision, int *exp_ptr,
 						t_bool uppercase);
 
+char				*ft_strtolower(char *s);
+char				*ft_strtoupper(char *s);
 char				*ft_strchr(const char *s, int c);
 size_t				ft_strlcat(char *dst,
 						const char *src, size_t dstsize);
