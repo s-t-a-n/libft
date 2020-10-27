@@ -45,6 +45,11 @@ int					ft_isdigit(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
 int					ft_issymbol(int c);
+int					ft_isinset(char c, char *set);
+
+int					ft_tolower(int c);
+int					ft_toupper(int c);
+
 
 void				ft_swap(char *a, char *b);
 void				ft_pswap(void **a, void **b);
@@ -95,9 +100,6 @@ char				*ft_strstrip(const char *s1, char c);
 char				*ft_strnstrip(const char *s1, char c, unsigned int n);
 char				*ft_strscan(char *str);
 char				*ft_strnscan(char *str, size_t n);
-
-int					ft_tolower(int c);
-int					ft_toupper(int c);
 
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);

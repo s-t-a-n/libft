@@ -35,6 +35,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_isascii												\
 		$(SRC_D)/ft_isdigit												\
 		$(SRC_D)/ft_isprint												\
+		$(SRC_D)/ft_isinset												\
 		$(SRC_D)/ft_itoa												\
 		$(SRC_D)/ft_dtoa_sc1											\
 		$(SRC_D)/ft_dtoa_sc2											\
