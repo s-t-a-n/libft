@@ -89,7 +89,7 @@ char				*ft_strnstr(const char *haystack,
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strdup(const char *s1);
 char				*ft_strndup(const char *s1, size_t len);
-char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strsub(char const *s, size_t start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_strsplit(char const *s, char c);
