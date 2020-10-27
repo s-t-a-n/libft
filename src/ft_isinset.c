@@ -5,7 +5,7 @@
 ** ft_isinset checks for matches of c in the string set (or other way around)
 */
 
-int		ft_isinset(char c, char *set)
+int		ft_isinset(char c, const char *set)
 {
 	while (*set)
 	{

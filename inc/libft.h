@@ -45,7 +45,7 @@ int					ft_isdigit(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
 int					ft_issymbol(int c);
-int					ft_isinset(char c, char *set);
+int					ft_isinset(char c, const char *set);
 
 int					ft_tolower(int c);
 int					ft_toupper(int c);
