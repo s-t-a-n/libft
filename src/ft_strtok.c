@@ -17,28 +17,30 @@
 ** return str after first occurence of next *delim token
 */
 
-char	*ft_strtok(char *str, const char *delim)
+char			*ft_strtok(char *str, const char *delim)
 {
-	char		*head;
-	static char	*tail;
-	int			i;
+	char		*key;
+	static char	*head;
+	char		*tail;
 
-	if (tail == NULL)
-		tail = str;
-	head = tail;
-	while (*tail)
+	if (str != NULL)
+		head = str;
+	key = NULL;
+	if (head)
 	{
-		i = 0;
-		while (delim[i] && delim[i] != *tail)
-			i++;
-		if (delim[i] == *tail)
+		tail = ft_strstr(head, delim);
+		if (tail)
 		{
-			tail++;
-			return (tail);
+			key = ft_strsub(head, 0, (size_t)tail - (size_t)head);
+			head = tail + 1;
 		}
-		tail++;
+		else
+		{
+			key = ft_strdup(head);
+			head = NULL;
+		}
 	}
-	return (tail);
+	return (key);
 }
 
 /*

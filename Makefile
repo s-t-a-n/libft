@@ -70,6 +70,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strncmp												\
 		$(SRC_D)/ft_strcmp												\
 		$(SRC_D)/ft_strnstr												\
+		$(SRC_D)/ft_strstr												\
 		$(SRC_D)/ft_strrchr												\
 		$(SRC_D)/ft_strtrim												\
 		$(SRC_D)/ft_strsub												\
