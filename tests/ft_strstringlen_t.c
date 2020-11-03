@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strstring_t.c                                   :+:    :+:            */
+/*   ft_strstringlen_t.c                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 {
 	if (argc == 2)
 	{
-		size_t len = ft_strstring(argv[1]);
+		size_t len = ft_strstringlen(argv[1]);
 		printf("length of string : %zu, sub string : |%s|\n", len, ft_strsub(argv[1], 1, len));
 		return (0);
 	}

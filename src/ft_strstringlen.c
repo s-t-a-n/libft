@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strstring.c                                     :+:    :+:            */
+/*   ft_strstringlen.c                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
@@ -13,11 +13,11 @@
 #include "libft.h"
 
 /*
-** ft_strstring looks for quoted substrings and handles escape characters
+** ft_strstringlen looks for quoted substrings and handles escape characters
 ** reliably. it assumes the first character is the quote character
 */
 
-size_t	ft_strstring(const char *str)
+size_t	ft_strstringlen(const char *str)
 {
 	size_t	len;
 
