@@ -17,6 +17,10 @@
 # include <stdint.h>
 # include "ft_std.h"
 
+# ifdef DEBUG
+#  include <stdio.h>
+# endif
+
 /*
 ** Defining CALLOC_ZERO_RETURN_NULL guarantees calloc returns NULL instead of
 ** calling malloc(0) when it is called with a zero 'count' or 'size'
@@ -56,6 +60,7 @@ void				ft_pswap(void **a, void **b);
 
 int					ft_atoi(const char *str);
 char				*ft_strtok(char *str, const char *delim);
+char				*ft_strstring(const char *str);
 size_t				ft_strstringlen(const char *str);
 long				ft_strtol(const char *str, char **endptr, int base);
 unsigned long long	ft_strtoull(const char *str, char **endptr, int base);
