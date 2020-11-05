@@ -23,6 +23,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strtoupper											\
 		$(SRC_D)/ft_strtok												\
 		$(SRC_D)/ft_strstringlen										\
+		$(SRC_D)/ft_strstring											\
 		$(SRC_D)/ft_strtol												\
 		$(SRC_D)/ft_strtoull											\
 		$(SRC_D)/ft_bzero												\
