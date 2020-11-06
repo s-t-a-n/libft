@@ -19,7 +19,8 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		char *str = ft_strstring(argv[1]);
-		printf("input string : |%s|, ft_strstring : |%s|\n", argv[1], str);
+		size_t strlen = ft_strstringlen(argv[1]);
+		printf("input string : |%s|, ft_strstring : |%s| with len : %zu\n", argv[1], str, strlen);
 		free(str);
 		return (0);
 	}

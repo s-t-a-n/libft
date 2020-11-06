@@ -19,23 +19,24 @@
 
 size_t	ft_strstringlen(const char *str)
 {
+	size_t	i;
 	size_t	len;
 
-	len = 1;
-	if (*str)
+	len = 0;
+	i = 1;
+	while (str[i])
 	{
-		while (str[len])
+		if (str[i] == *str)
 		{
-			if (str[len] == *str)
-			{
-				if (str[len - 1] != '\\'
-				|| (len >= 2 && str[len - 1] == '\\' && str[len - 2] == '\\'))
-					return (len - 1);
-			}
-			len++;
+			if (str[i - 1] != '\\'
+			|| (i >= 2 && str[i - 1] == '\\' && str[i - 2] == '\\'))
+				return (len);
 		}
-		if (str[len] != *str)
-			return (0);
+		else
+			len++;
+		i++;
 	}
-	return (len - 1);
+	if (str[len] != *str)
+		return (0);
+	return (len);
 }
