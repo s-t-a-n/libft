@@ -26,7 +26,7 @@ char	*ft_strstring(const char *str)
 				newstr[i] = *str;
 				i++;
 			}
-			else if (i > 0 && *(str - 1) == '\\')
+			else
 				len--;
 		}
 		newstr[len] = '\0';
