@@ -32,8 +32,7 @@ size_t	ft_strstringlen(const char *str)
 			|| (i >= 2 && str[i - 1] == '\\' && str[i - 2] == '\\'))
 				return (len);
 		}
-		else
-			len++;
+		len++;
 		i++;
 	}
 	if (str[len] != *str)

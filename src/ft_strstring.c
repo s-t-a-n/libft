@@ -3,7 +3,8 @@
 
 /*
 ** ft_strstring looks for quoted substrings and handles escape characters
-** reliably. it assumes the first character is the quote character
+** reliably. it assumes the first character is the quote character.
+** because of use of ft_strstringlen is slightly overmallocs.
 */
 
 char	*ft_strstring(const char *str)
