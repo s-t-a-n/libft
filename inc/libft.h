@@ -15,7 +15,6 @@
 
 # include <stddef.h>
 # include <stdint.h>
-# include "ft_std.h"
 
 # ifdef DEBUG
 #  include <stdio.h>
@@ -30,6 +29,30 @@
 /*
 ** libft definitions
 */
+
+# define STDIN 0
+# define STDOUT 1
+# define STDERR 2
+
+typedef enum		e_bool
+{
+	FALSE = 0,
+	err = 0,
+	TRUE = 1,
+	noerr = 1
+}					t_bool;
+
+typedef struct		s_vector2
+{
+	int				x;
+	int				y;
+}					t_vector2;
+
+typedef struct		s_flvector2
+{
+	double			x;
+	double			y;
+}					t_flvector2;
 
 typedef enum		e_case
 {
@@ -97,9 +120,11 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strdup(const char *s1);
 char				*ft_strndup(const char *s1, size_t len);
 char				*ft_strsub(char const *s, size_t start, size_t len);
+char				*ft_substr(char const *s, size_t start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_strsplit(char const *s, char c);
+char				**ft_split(char const *s, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 size_t				ft_strcount(const char *s1, char c);
 size_t				ft_strncount(const char *s1, char c, unsigned int n);

@@ -15,7 +15,6 @@
 #include <float.h>
 
 #include "libft.h"
-#include "ft_std.h"
 
 #define DTOA_WSIZE 2024
 #define DTOA_MAX_PRECISION 100

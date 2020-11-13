@@ -59,6 +59,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_putstr_fd											\
 		$(SRC_D)/ft_putwstr_fd											\
 		$(SRC_D)/ft_strsplit											\
+		$(SRC_D)/ft_split												\
 		$(SRC_D)/ft_strchr												\
 		$(SRC_D)/ft_strdup												\
 		$(SRC_D)/ft_strjoin												\
@@ -75,6 +76,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strrchr												\
 		$(SRC_D)/ft_strtrim												\
 		$(SRC_D)/ft_strsub												\
+		$(SRC_D)/ft_substr												\
 		$(SRC_D)/ft_tolower												\
 		$(SRC_D)/ft_toupper												\
 		$(SRC_D)/ft_destroy_array										\

@@ -15,7 +15,6 @@
 #include <float.h>
 
 #include "libft.h"
-#include "ft_std.h"
 #include "ft_dtoa_sc.h"
 
 static void		ft_handle_exponent(int *exp, int *exp_ptr, char *worker)
@@ -72,19 +71,19 @@ static t_bool	ft_handle_exceptions(double nb, char *worker,
 	if (nb > LDBL_MAX)
 	{
 		ft_strlcat(worker, uppercase ? "INF" : "inf", DTOA_WSIZE);
-		return (true);
+		return (TRUE);
 	}
 	else if (nb < -1 * LDBL_MAX)
 	{
 		ft_strlcat(worker, uppercase ? "-INF" : "-inf", DTOA_WSIZE);
-		return (true);
+		return (TRUE);
 	}
 	else if (nb != nb)
 	{
 		ft_strlcat(worker, uppercase ? "NAN" : "nan", DTOA_WSIZE);
-		return (true);
+		return (TRUE);
 	}
-	return (false);
+	return (FALSE);
 }
 
 char			*ft_dtoa_sc(double nb, int precision, int *exp_ptr,
