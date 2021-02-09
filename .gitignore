@@ -136,6 +136,7 @@ CMakeUserPresets.json
 
 obj
 *.log
+*.error
 *.swiftdoc
 *.swiftmodule
 libft.a
