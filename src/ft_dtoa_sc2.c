@@ -23,14 +23,14 @@ void		ft_perform_bankers_rounding_sc(double nb, char *worker,
 				size_t worker_len)
 {
 	int					ctr;
-	unsigned long long	nb_asint;
+	unsignedlonglong	nb_asint;
 
 	ctr = 0;
-	nb_asint = (unsigned long long)nb;
+	nb_asint = (unsignedlonglong)nb;
 	while (ctr < DTOA_MAX_PRECISION)
 	{
 		nb = 10.0 * (nb - nb_asint);
-		nb_asint = (unsigned long long)nb;
+		nb_asint = (unsignedlonglong)nb;
 		if (nb_asint > 0)
 		{
 			worker[worker_len > 0 ? worker_len - 1 : 0]++;
@@ -63,7 +63,7 @@ void		ft_perform_retrospective_rounding_sc(char *worker,
 		worker[worker_len - 1]++;
 }
 
-void		ft_handle_integer_rounding_sc(unsigned long long nb_asint,
+void		ft_handle_integer_rounding_sc(unsignedlonglong nb_asint,
 				char *master)
 {
 	char *tmp;
@@ -79,12 +79,12 @@ void		ft_handle_integer_rounding_sc(unsigned long long nb_asint,
 
 void		ft_handle_rounding_sc(double nb, char *worker, char *master)
 {
-	unsigned long long	nb_asint;
+	unsignedlonglong	nb_asint;
 	size_t				worker_len;
 
-	nb_asint = (unsigned long long)nb;
+	nb_asint = (unsignedlonglong)nb;
 	nb = 10.0 * (nb - nb_asint);
-	nb_asint = (unsigned long long)nb;
+	nb_asint = (unsignedlonglong)nb;
 	worker_len = ft_strnlen(worker, DTOA_WSIZE);
 	if (worker_len == 0)
 	{
@@ -106,14 +106,14 @@ void		ft_handle_precision_sc(double *nb, int precision,
 					char *worker)
 {
 	int					ctr;
-	unsigned long long	nb_asint;
+	unsignedlonglong	nb_asint;
 
 	ctr = 0;
-	nb_asint = (unsigned long long)*nb;
+	nb_asint = (unsignedlonglong)*nb;
 	while (ctr < precision)
 	{
 		*nb = 10.0 * (*nb - nb_asint);
-		nb_asint = (unsigned long long)*nb;
+		nb_asint = (unsignedlonglong)*nb;
 		worker[ctr] = (char)nb_asint + '0';
 		ctr++;
 	}

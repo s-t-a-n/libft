@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_list		*list_popback(t_list *root, uint8_t is_malloced)
+struct t_list		*list_popback(struct t_list *root, uint8_t is_malloced)
 {
 	if (root)
 	{

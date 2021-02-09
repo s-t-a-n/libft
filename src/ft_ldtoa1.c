@@ -21,14 +21,14 @@ static void		ft_handle_precision(long double *nb, int precision,
 					char *worker)
 {
 	int					ctr;
-	unsigned long long	nb_asint;
+	unsignedlonglong	nb_asint;
 
 	ctr = 0;
-	nb_asint = (unsigned long long)*nb;
+	nb_asint = (unsignedlonglong)*nb;
 	while (ctr < precision)
 	{
 		*nb = 10.0 * (*nb - nb_asint);
-		nb_asint = (unsigned long long)*nb;
+		nb_asint = (unsignedlonglong)*nb;
 		worker[ctr] = (char)nb_asint + '0';
 		ctr++;
 	}
@@ -60,7 +60,7 @@ static char		*ft_handle_integer(long double *nb)
 		ft_strlcat(worker, "0", DTOA_WSIZE);
 		return (ft_strndup(worker, DTOA_WSIZE));
 	}
-	tmp = ft_ulltoa_base((unsigned long long)*nb, 10, __lowcase);
+	tmp = ft_ulltoa_base((unsignedlonglong)*nb, 10, __lowcase);
 	if (tmp)
 	{
 		ft_strlcat(worker, tmp, DTOA_WSIZE);

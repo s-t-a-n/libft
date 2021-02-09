@@ -16,10 +16,14 @@
 ** only copy if dst != src
 */
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst_, const void *src_, int c, size_t n)
 {
+	unsigned char		*dst;
+	const unsigned char	*src = src_;
+
+	dst = dst_;
 	if (dst == src)
-		return (ft_memchr(dst, c, n) + 1);
+		return ((unsigned char *)ft_memchr(dst, c, n) + 1);
 	else
 		while (n > 0)
 		{

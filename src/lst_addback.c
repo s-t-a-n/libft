@@ -13,12 +13,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
-t_list		*lst_addback(t_list **root, void *subject)
+struct t_list		*lst_addback(struct t_list **root, void *subject)
 {
-	t_list	*head;
-	t_list	*new;
+	struct t_list	*head;
+	struct t_list	*new;
 
-	new = malloc(sizeof(t_list));
+	new = malloc(sizeof(struct t_list));
 	if (new)
 	{
 		new->next = NULL;

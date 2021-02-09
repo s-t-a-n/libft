@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-t_list		*lst_destroy_item(t_list *root, uint8_t is_malloced)
+struct t_list		*lst_destroy_item(struct t_list *root, uint8_t is_malloced)
 {
 	if (root && is_malloced)
 		free(root->subject);

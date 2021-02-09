@@ -12,10 +12,13 @@
 
 #include "libft.h"
 
-static void	*ft_memcpy_rev(void *dst, const void *src, size_t len)
+static void	*ft_memcpy_rev(void *dst_, const void *src_, size_t len)
 {
-	const void		*orig_dst = dst;
+	unsigned char		*dst;
+	const unsigned char	*src = src_;
+	const void			*orig_dst = dst_;
 
+	dst = dst_;
 	dst += len - 1;
 	src += len - 1;
 	while (len > 0)

@@ -13,36 +13,36 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static unsigned int	ft_ulltoa_strlen(unsigned long long nb, int base,
+static unsigned int	ft_ulltoa_strlen(unsignedlonglong nb, int base,
 		unsigned int len)
 {
-	if (nb > (unsigned long long)(base - 1))
+	if (nb > (unsignedlonglong)(base - 1))
 		len += ft_ulltoa_strlen(nb / base, base, len);
 	len += 1;
 	return (len);
 }
 
-static void			ft_fill_string_lowcase(char *str, unsigned long long nb,
+static void			ft_fill_string_lowcase(char *str, unsignedlonglong nb,
 						int base, unsigned int index)
 {
 	const char ctab[36] = "0123456789abcdefghijklmnopqrstuvwxyz";
 
-	if (nb > (unsigned long long)(base - 1))
+	if (nb > (unsignedlonglong)(base - 1))
 		ft_fill_string_lowcase(str, nb / base, base, index - 1);
 	str[index] = ctab[nb % base];
 }
 
-static void			ft_fill_string_upcase(char *str, unsigned long long nb,
+static void			ft_fill_string_upcase(char *str, unsignedlonglong nb,
 						int base, unsigned int index)
 {
 	const char ctab[36] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	if (nb > (unsigned long long)(base - 1))
+	if (nb > (unsignedlonglong)(base - 1))
 		ft_fill_string_upcase(str, nb / base, base, index - 1);
 	str[index] = ctab[nb % base];
 }
 
-char				*ft_ulltoa_base(unsigned long long nb, int base,
+char				*ft_ulltoa_base(unsignedlonglong nb, int base,
 						int uppercase)
 {
 	unsigned int	len;

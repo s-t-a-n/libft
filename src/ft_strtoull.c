@@ -50,7 +50,7 @@ static int					ft_numeric_value_for_base(char c, int base)
 		return (-1);
 }
 
-static unsigned long long	ft_strtol_handle_overflow(unsigned long long value,
+static unsignedlonglong	ft_strtol_handle_overflow(unsignedlonglong value,
 								char **endptr, int base)
 {
 	if (endptr)
@@ -64,11 +64,11 @@ static unsigned long long	ft_strtol_handle_overflow(unsigned long long value,
 		return (value);
 }
 
-unsigned long long			ft_strtoull(const char *str, char **endptr,
+unsignedlonglong			ft_strtoull(const char *str, char **endptr,
 								int base)
 {
-	unsigned long long	retval;
-	unsigned long long	cutoff;
+	unsignedlonglong	retval;
+	unsignedlonglong	cutoff;
 	int					nbr;
 
 	if (base < 0 || base == 1 || base > 36)
