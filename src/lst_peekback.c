@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_list		*list_peekback(t_list *root)
+struct t_list		*list_peekback(struct t_list *root)
 {
 	if (root)
 	{

@@ -61,8 +61,29 @@ typedef enum		e_case
 }					t_case;
 
 /*
+** C89 doesn't define longlong's (introduced in C99)
+*/
+#ifndef C89_LONGLONG
+# define C89_LONGLONG
+
+typedef uint64_t	unsignedlonglong;
+typedef int64_t		longlong;
+
+#undef  LLONG_MIN
+#undef  LLONG_MAX
+#undef  ULLONG_MAX
+#undef __LONG_LONG_MAX__
+
+#define __LONG_LONG_MAX__ sizeof(int64_t)
+#define LLONG_MAX  __LONG_LONG_MAX__
+#define LLONG_MIN  (-__LONG_LONG_MAX__-1)
+#define ULLONG_MAX (__LONG_LONG_MAX__*2+1)
+#endif
+
+/*
 **  libft functions
 */
+
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_isalnum(int c);
@@ -86,13 +107,13 @@ char				*ft_strtok(char *str, const char *delim);
 char				*ft_strstring(const char *str);
 size_t				ft_strstringlen(const char *str);
 long				ft_strtol(const char *str, char **endptr, int base);
-unsigned long long	ft_strtoull(const char *str, char **endptr, int base);
+unsignedlonglong	ft_strtoull(const char *str, char **endptr, int base);
 char				*ft_itoa(int n);
 char				*ft_ultoa_base(unsigned long nb, int base, int uppercase);
-char				*ft_ulltoa_base(unsigned long long nb, int base,
+char				*ft_ulltoa_base(unsignedlonglong nb, int base,
 						int uppercase);
 char				*ft_ltoa_base(long int nb, int base, int uppercase);
-char				*ft_lltoa_base(long long int nb, int base, int uppercase);
+char				*ft_lltoa_base(longlong nb, int base, int uppercase);
 char				*ft_ldtoa(long double nb, int precision);
 char				*ft_dtoa_sc(double nb, int precision, int *exp_ptr,
 						t_bool uppercase);
@@ -100,10 +121,8 @@ char				*ft_dtoa_sc(double nb, int precision, int *exp_ptr,
 char				*ft_strtolower(char *s);
 char				*ft_strtoupper(char *s);
 char				*ft_strchr(const char *s, int c);
-size_t				ft_strlcat(char *dst,
-						const char *src, size_t dstsize);
-size_t				ft_strlcpy(char *restrict dst,
-						const char *restrict src, size_t dstsize);
+size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
 size_t				ft_wcslen(wchar_t *ws);
 int					ft_wclen(wchar_t wc);
@@ -157,22 +176,22 @@ void				*ft_destroy_array(void **elements, int elem_size,
 /*
 ** basic list functionality
 */
-typedef struct		s_list t_list;
-typedef struct		s_list
+struct				t_list;
+struct				t_list
 {
 	void			*subject;
-	t_list			*next;
-	t_list			*prev;
-}					t_list;
+	struct t_list	*next;
+	struct t_list	*prev;
+};
 
-t_list				*lst_addback(t_list **root, void *subject);
-t_list				*lst_addfront(t_list **root, void *subject);
-t_list				*lst_peekback(t_list *root);
-t_list				*lst_peekfront(t_list *root);
-t_list				*lst_popback(t_list *root, uint8_t is_malloced);
-t_list				*lst_popfront(t_list *root, uint8_t is_malloced);
-t_list				*lst_destroy_item(t_list *root, uint8_t is_malloced);
-t_list				*lst_destroy(t_list **root, uint8_t is_malloced);
+struct t_list				*lst_addback(struct t_list **root, void *subject);
+struct t_list				*lst_addfront(struct t_list **root, void *subject);
+struct t_list				*lst_peekback(struct t_list *root);
+struct t_list				*lst_peekfront(struct t_list *root);
+struct t_list				*lst_popback(struct t_list *root, uint8_t is_malloced);
+struct t_list				*lst_popfront(struct t_list *root, uint8_t is_malloced);
+struct t_list				*lst_destroy_item(struct t_list *root, uint8_t is_malloced);
+struct t_list				*lst_destroy(struct t_list **root, uint8_t is_malloced);
 
 /*
 ** very basic vector implementation, kept in for compatibility with old projects

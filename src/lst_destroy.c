@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-t_list		*lst_destroy(t_list **root, uint8_t is_malloced)
+struct t_list		*lst_destroy(struct t_list **root, uint8_t is_malloced)
 {
-	t_list	*head;
-	t_list	*rip;
-	
+	struct t_list	*head;
+	struct t_list	*rip;
+
 	if (!root || !*root)
 		return (NULL);
 	head = (*root)->prev;

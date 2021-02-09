@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char			*ft_lltoa_base(long long int nb, int base, int uppercase)
+char			*ft_lltoa_base(longlong nb, int base, int uppercase)
 {
 	char *str;
 	char *finstr;

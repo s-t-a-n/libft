@@ -51,7 +51,7 @@ static void		ft_handle_integer(double *nb, int *exp, char *worker)
 		ft_strlcat(worker, "-", DTOA_WSIZE);
 		*nb *= -1.0;
 	}
-	if (*nb / 10.0 == 0 && (unsigned long long)*nb == 0)
+	if (*nb / 10.0 == 0 && (unsignedlonglong) * nb == 0)
 	{
 		ft_strlcat(worker, "0", DTOA_WSIZE);
 		return ;

@@ -130,7 +130,7 @@ CC = clang
 #CC = gcc
 
 # compile flags
-CC_FLAGS = -Werror -Wextra -Wall
+CC_FLAGS = -Werror -Wextra -Wall -pedantic -std=c89
 
 # debugging or optimilization flags
 CC_OPT_FLAGS = -Ofast													\
