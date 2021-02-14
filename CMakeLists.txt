@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.11)
 project(ft)
 add_library(ft STATIC
 src/ft_strtoupper.c
@@ -88,6 +88,16 @@ src/ft_putchar_fd.c
 src/ft_dynmem.c
 src/ft_isascii.c
 )
+
+# Only do these if this is the main project, and not if it is included through add_subdirectory
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+	if(BUILD_TESTING)
+		target_compile_options(ft PRIVATE -Wall -Wextra -Werror -std=c89 -pedantic -g -fsanitize=address)
+	else()
+		target_compile_options(ft PRIVATE -Wall -Wextra -Werror -std=c89 -pedantic)
+	endif()
+endif()
+
 target_include_directories(ft
     PUBLIC
 		inc
