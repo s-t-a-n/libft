@@ -1,94 +1,54 @@
-cmake_minimum_required(VERSION 3.5)
-project(ft)
-add_library(ft STATIC
-src/ft_strtoupper.c
-src/ft_strstringlen.c
-src/ft_isinset.c
-src/ft_putwchar_fd.c
-src/ft_strncmp.c
-src/lst_destroy.c
-src/ft_strtolower.c
-src/ft_strstrip.c
-src/ft_toupper.c
-src/ft_isalnum.c
-src/ft_substr.c
-src/ft_ulltoa_base.c
-src/ft_strndup.c
-src/ft_destroy_array.c
-src/ft_strcount.c
-src/ft_wcslen.c
-src/ft_dtoa_sc1.c
-src/ft_ltoa_base.c
-src/ft_strmapi.c
-src/ft_ultoa_base.c
-src/ft_putwstr_fd.c
-src/ft_putnbr_fd.c
-src/ft_split.c
-src/ft_islower.c
-src/ft_strrev.c
-src/lst_destroy_item.c
-src/ft_strdup.c
-src/ft_isupper.c
-src/ft_lltoa_base.c
-src/ft_strscan.c
-src/ft_memchr.c
-src/ft_isalpha.c
-src/ft_strcmp.c
-src/ft_putstr_fd.c
-src/ft_putnbr_base_fd.c
-src/ft_strlcat.c
-src/ft_dtoa_sc2.c
-src/ft_strnscan.c
-src/ft_atoi.c
-src/ft_strsplit.c
-src/ft_strstring.c
-src/ft_isprint.c
-src/ft_strtoull.c
-src/lst_addback.c
-src/ft_strncount.c
-src/ft_ldtoa1.c
-src/lst_popfront.c
-src/ft_strcsetlen.c
-src/ft_strnlen.c
-src/ft_strlen.c
-src/ft_ldtoa2.c
-src/lst_addfront.c
-src/ft_memccpy.c
-src/ft_strtol.c
-src/lst_popback.c
-src/ft_tolower.c
-src/ft_strnstrip.c
-src/ft_swap.c
-src/ft_strlcpy.c
-src/ft_isdigit.c
-src/lst_peekback.c
-src/ft_strtrim.c
-src/ft_memcmp.c
-src/lst_peekfront.c
-src/ft_memcpy.c
-src/ft_strrchr.c
-src/ft_strtok.c
-src/ft_memmove.c
-src/ft_strsub.c
-src/ft_wclen.c
-src/ft_strchr.c
-src/ft_issymbol.c
-src/ft_strstr.c
-src/ft_realloc.c
-src/ft_strjoin.c
-src/ft_isspace.c
-src/ft_bzero.c
-src/ft_itoa.c
-src/ft_calloc.c
-src/ft_strclen.c
-src/ft_putendl_fd.c
-src/ft_memset.c
-src/ft_strnstr.c
-src/ft_putchar_fd.c
-src/ft_dynmem.c
-src/ft_isascii.c
-)
-target_include_directories(ft
-    PUBLIC
-		inc
-)
+cmake_minimum_required(VERSION 3.12)
+project(
+	ft
+	VERSION 0.1
+	DESCRIPTION "libft: A DIY LIBC - 42 project"
+	LANGUAGES C CXX)
+
+# CMakeLists.txt inspired by:
+# https://gitlab.com/CLIUtils/modern-cmake/tree/master/examples/extended-project
+
+# Only do these if this is the main project, and not if it is included through add_subdirectory
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+	# global compilation standards
+	set(CMAKE_C_STANDARD 99)
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra -pedantic")
+	
+	set(CMAKE_CXX_STANDARD 98)
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra -pedantic")
+
+	include(CTest)
+
+	if(BUILD_TESTING)
+		set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -fsanitize=address")
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fsanitize=address")
+	endif()
+
+	# Let's nicely support folders in IDEs
+	set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+	# Docs only available if this is the main app
+	find_package(Doxygen)
+	if(Doxygen_FOUND)
+		add_subdirectory(docs)
+	else()
+		message(STATUS "Doxygen not found, not building docs")
+	endif()
+endif()
+
+# FetchContent added in CMake 3.11, downloads during the configure step
+include(FetchContent)
+
+# FetchContent_MakeAvailable was not added until CMake 3.14; use our shim
+if(${CMAKE_VERSION} VERSION_LESS 3.14)
+	include(cmake/add_FetchContent_MakeAvailable.cmake)
+endif()
+
+add_subdirectory(src)
+
+# Testing only available if this is the main app
+# Emergency override MODERN_CMAKE_BUILD_TESTING provided as well
+if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING)
+   AND BUILD_TESTING)
+  add_subdirectory(tests)
+endif()
