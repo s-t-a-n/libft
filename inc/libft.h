@@ -171,9 +171,8 @@ void				ft_putwstr_fd(wchar_t *ws, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr_base_fd(unsigned long nb, int base, int fd);
-void				*ft_destroy_array(void **elements, int elem_size,
-						int elem_count);
-size_t				ft_arraylen(void *elements, int elem_size);
+void				*ft_array_destroy(void **elements, size_t count);
+size_t				ft_arraylen(const void **elements);
 
 /*
 ** basic list functionality

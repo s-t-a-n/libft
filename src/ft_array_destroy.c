@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_arraylen.c                                      :+:    :+:            */
+/*   ft_array_destroy.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
@@ -10,16 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-#include <stdio.h>
-
-size_t	ft_arraylen(const void **elements)
+void	*ft_array_destroy(void **elements, size_t count)
 {
-	size_t len;
+	size_t	i;
 
-	len = 0;
-	while (elements[len])
-		len++;
-	return (len);
+	i = 0;
+	while (i < count)
+	{
+		free(elements[i]);
+		i++;
+	}
+	free(elements);
+	return (NULL);
 }
