@@ -70,8 +70,7 @@ char			**ft_strsplit(char const *s, char c)
 		elem_len = ft_strclen(s, c);
 		array[array_ctr] = ft_strsub(s, 0, elem_len);
 		if (array[array_ctr] == NULL)
-			return (ft_destroy_array((void **)array, sizeof(void *),
-			array_ctr + 1));
+			return (ft_array_destroy((void **)array, array_ctr + 1));
 		s += elem_len;
 		s += ft_get_skip_len(s, c);
 		array_ctr++;

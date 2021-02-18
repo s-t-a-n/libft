@@ -12,16 +12,14 @@
 
 #include "libft.h"
 
-size_t	ft_arraylen(void *_elements, int elem_size)
+#include <stdio.h>
+
+size_t	ft_arraylen(const void **elements)
 {
 	size_t len;
-	const unsigned char *elements = (unsigned char *)_elements;
 
 	len = 0;
-	while (elements)
-	{
-		elements += elem_size;
+	while (elements[len])
 		len++;
-	}
 	return (len);
 }
