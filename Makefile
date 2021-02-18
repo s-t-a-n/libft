@@ -81,6 +81,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_tolower												\
 		$(SRC_D)/ft_toupper												\
 		$(SRC_D)/ft_destroy_array										\
+		$(SRC_D)/ft_arraylen											\
 		$(SRC_D)/ft_strclen												\
 		$(SRC_D)/ft_strcsetlen											\
 		$(SRC_D)/ft_isspace												\

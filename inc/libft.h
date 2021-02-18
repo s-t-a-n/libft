@@ -173,6 +173,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr_base_fd(unsigned long nb, int base, int fd);
 void				*ft_destroy_array(void **elements, int elem_size,
 						int elem_count);
+size_t				ft_arraylen(void *elements, int elem_size);
 
 /*
 ** basic list functionality
