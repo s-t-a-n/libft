@@ -64,6 +64,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strchr												\
 		$(SRC_D)/ft_strdup												\
 		$(SRC_D)/ft_strjoin												\
+		$(SRC_D)/ft_strjoin_noreuse										\
 		$(SRC_D)/ft_strlcat												\
 		$(SRC_D)/ft_strlcpy												\
 		$(SRC_D)/ft_strlen												\
