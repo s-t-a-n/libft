@@ -20,9 +20,9 @@ char	*ft_strjoin_noreuse(char *s1, char *s2)
 	size_t	s2_len;
 
 	if (!s1 && s2)
-		return (ft_strdup(s2));
+		return (s2);
 	if (s1 && !s2)
-		return (ft_strdup(s1));
+		return (s1);
 	if (!s1 && !s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
