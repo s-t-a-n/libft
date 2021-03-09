@@ -5,16 +5,23 @@
 /*                                                     +:+                    */
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/06/19 22:05:39 by sverschu      #+#    #+#                 */
-/*   Updated: 2020/10/25 22:33:23 by sverschu      ########   odam.nl         */
+/*   Created: 2019/11/04 22:05:39 by sverschu      #+#    #+#                 */
+/*   Updated: 2021/03/09 22:33:23 by sverschu      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+/*
+** I started this project when I came into Codam Coding College.
+** This is a weird collection of functions which would much better served in
+** separate libraries.
+*/
+
 # include <stddef.h>
 # include <stdint.h>
+# include <stdarg.h>
 
 # ifdef DEBUG
 #  include <stdio.h>
@@ -141,6 +148,7 @@ char				*ft_strndup(const char *s1, size_t len);
 char				*ft_strsub(char const *s, size_t start, size_t len);
 char				*ft_substr(char const *s, size_t start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin_multi(size_t count, ...);
 char				*ft_strjoin_noreuse(char *s1, char *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_strsplit(char const *s, char c);
