@@ -64,6 +64,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_strchr												\
 		$(SRC_D)/ft_strdup												\
 		$(SRC_D)/ft_strjoin												\
+		$(SRC_D)/ft_strjoin_multi										\
 		$(SRC_D)/ft_strjoin_noreuse										\
 		$(SRC_D)/ft_strlcat												\
 		$(SRC_D)/ft_strlcpy												\
@@ -133,7 +134,7 @@ CC = clang
 #CC = gcc
 
 # compile flags
-CC_FLAGS = -Werror -Wextra -Wall -pedantic -std=c89
+CC_FLAGS = -Werror -Wextra -Wall -pedantic -std=c99
 
 # debugging or optimilization flags
 CC_OPT_FLAGS = -Ofast													\
