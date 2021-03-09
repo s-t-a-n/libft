@@ -9,7 +9,7 @@ file(GLOB SRC_LIST CONFIGURE_DEPENDS "${ft_SOURCE_DIR}/src/*.c")
 add_library(ft ${SRC_LIST} ${HEADER_LIST})
 
 # Set the compilation standards
-set_property(TARGET ft PROPERTY C_STANDARD 90)
+set_property(TARGET ft PROPERTY C_STANDARD 99)
 
 # We need this directory, and users of our library will need it too
 target_include_directories(ft PUBLIC ../inc)
