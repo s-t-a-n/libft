@@ -50,6 +50,7 @@ SRC =	$(SRC_D)/ft_atoi												\
 		$(SRC_D)/ft_memchr												\
 		$(SRC_D)/ft_memcmp												\
 		$(SRC_D)/ft_memdmp												\
+		$(SRC_D)/ft_memdup												\
 		$(SRC_D)/ft_memcpy												\
 		$(SRC_D)/ft_memmove												\
 		$(SRC_D)/ft_memset												\
