@@ -182,7 +182,9 @@ void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr_base_fd(unsigned long nb, int base, int fd);
 void				*ft_array_destroy(void **elements, size_t count);
-size_t				ft_arraylen(const void **elements);
+size_t				ft_array_len(const void **elements);
+
+void				bubblesort_lexical(char **elements);
 
 /*
 ** basic list functionality
