@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_arraylen.c                                      :+:    :+:            */
+/*   ft_array_len.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sverschu <sverschu@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
@@ -12,9 +12,7 @@
 
 #include "libft.h"
 
-#include <stdio.h>
-
-size_t	ft_arraylen(const void **elements)
+size_t	ft_array_len(const void **elements)
 {
 	size_t len;
 
