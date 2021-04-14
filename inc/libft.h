@@ -105,6 +105,7 @@ int					ft_isinset(char c, const char *set);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 
+t_bool				ft_striseach(const char *str, int (*f)(int c));
 
 void				ft_swap(char *a, char *b);
 void				ft_pswap(void **a, void **b);
