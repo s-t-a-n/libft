@@ -18,6 +18,7 @@ t_bool	ft_striseach(const char *str, int (*f)(int c))
 	{
 		if (!f(*str))
 			return (FALSE);
+		str++;
 	}
 	return (TRUE);
 }
